@@ -1,0 +1,8 @@
+theme: jekyll-theme-slate
+github:
+    repository_name: karton
+    repository_url: http://github.com/karton/karton
+    owner_name: Marco Barisione
+    owner_url: http://www.barisione.org/
+title: Karton
+description: Run Linux programs on macOS or on a different Linux distribution
