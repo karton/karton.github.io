@@ -1,0 +1,10 @@
+*.sw[po]
+*~
+.DS_Store
+*.orig
+*.rej
+*.bak
+*.py[co]
+
+Gemfile.lock
+_site/
