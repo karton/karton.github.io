@@ -2,3 +2,83 @@
 ---
 
 @import "{{ site.theme }}";
+
+/* ======== Header ======== */
+
+header table,
+header table tr,
+header table td {
+    margin: 0;
+    padding: 0;
+    vertical-align: middle;
+    border: none;
+}
+
+header table td#cell_logo img {
+    box-shadow: none !important;
+    border-width: 0px !important;
+}
+
+header table td#cell_text {
+    padding-left: 10px !important;
+    color: red !important;
+}
+
+/* ======== Navigation bar ======== */
+
+#navbar {
+    /* Quick hack to make the navbar extend.
+     * It will work until people start using monitor bigger than 6K... */
+    margin: 0 -3010px;
+    padding: 0 3000px;
+
+    overflow: hidden;
+    background-color: #3C3C3C;
+}
+
+#header_wrap {
+    /* This is for the above hack. */
+    overflow: hidden;
+}
+
+#navbar ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+#navbar li {
+    float: left;
+}
+
+#navbar li a {
+    display: block;
+    color: white;
+    padding: 15px;
+    text-decoration: none;
+    /* This matches the existing shadows. */
+    text-shadow: #111 0px 0px 10px;
+}
+
+#navbar li a:hover {
+    /* This matches the GitHub button. */
+    background-color: #0090ff;
+}
+
+#header_wrap header.inner {
+    /* Don't leave space after the navbar. */
+    padding-bottom: 0;
+}
+
+#main_content_wrap {
+    /* The content has a border which would be visible between navbar and
+     * content, so we need to hide it. */
+    border-top-width: 0;
+}
+
+/* ======== Content ======== */
+
+pre {
+    /* Without this the pre becomes 640px-wide like the rest of the body,
+     * so it overflows its container (because of the padding). */
+    max-width: 620px;
+}
