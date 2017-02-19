@@ -51,9 +51,13 @@
     <!-- FOOTER  -->
     <div id="footer_wrap" class="outer">
       <footer class="inner">
-        {% if site.github.is_project_page %}
-        <p class="copyright">{{ site.title | default: site.github.repository_name }} maintained by <a href="{{ site.github.owner_url }}">{{ site.github.owner_name }}</a></p>
-        {% endif %}
+        <p class="copyright">
+            {{ site.title | default: site.github.repository_name }} is maintained by
+            {{ site.github.owner_name }}
+            &ndash;
+            <a href="{{ site.github.owner_url }}" target="_blank">Website</a>,
+            <a href="https://twitter.com/barisione/" target="_blank">Twitter</a>
+        </p>
         <!-- <p>Published with <a href="https://pages.github.com">GitHub Pages</a></p> -->
       </footer>
     </div>
