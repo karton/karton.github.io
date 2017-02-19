@@ -14,7 +14,12 @@ header table td {
     border: none;
 }
 
+header table {
+    margin: 0 0 5px 0;
+}
+
 header table td#cell_logo img {
+    margin: 0;
     box-shadow: none !important;
     border-width: 0px !important;
 }
@@ -22,6 +27,11 @@ header table td#cell_logo img {
 header table td#cell_text {
     padding-left: 10px !important;
     color: red !important;
+}
+
+#project_tagline {
+    margin: 0 0 10px 0;
+    padding: 0;
 }
 
 /* ======== Navigation bar ======== */
