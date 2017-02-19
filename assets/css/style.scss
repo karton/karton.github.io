@@ -18,10 +18,22 @@ header table {
     margin: 0 0 5px 0;
 }
 
-header table td#cell_logo img {
+header table td#cell_logo div#logo_image {
     margin: 0;
     box-shadow: none !important;
     border-width: 0px !important;
+    width: 128px;
+    height: 128px;
+    background: url("/img/karton-256.png") no-repeat center;
+    background-size: 128px;
+    @media screen and (max-width: 500px) {
+        width: 64px;
+        height: 64px;
+        background-size: 64px;
+    }
+    @media screen and (max-width: 320px) {
+        display: none;
+    }
 }
 
 header table td#cell_text {
