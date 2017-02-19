@@ -80,5 +80,5 @@ header table td#cell_text {
 pre {
     /* Without this the pre becomes 640px-wide like the rest of the body,
      * so it overflows its container (because of the padding). */
-    max-width: 620px;
+    box-sizing: border-box;
 }
