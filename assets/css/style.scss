@@ -46,6 +46,13 @@ header table td#cell_text {
     padding: 0;
 }
 
+#forkme_banner {
+  background-image: url("/img/github.svg");
+  background-size: 24px;
+  padding-right: 38px;
+  background-position-y: 40%;
+}
+
 /* ======== Navigation bar ======== */
 
 #navbar {
