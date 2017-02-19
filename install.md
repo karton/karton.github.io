@@ -1,3 +1,7 @@
+---
+title: Install Karton
+---
+
 Installation guide
 ==================
 
