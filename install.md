@@ -11,7 +11,7 @@ Linux
     * Alternatively, you can install Karton from [source](#from-source-all-platforms).
 
 
-MacOS
+macOS
 -----
 
 1. Install Docker for Mac following the [official instructions](https://docs.docker.com/docker-for-mac/).
