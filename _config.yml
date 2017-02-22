@@ -5,7 +5,7 @@ github:
     owner_name: Marco Barisione
     owner_url: http://www.barisione.org/
 title: Karton
-description: Run Linux programs on macOS or on a different Linux distribution
+description: Run Linux programs on macOS, a different Linux distro, or a different architecture
 google_analytics: UA-92189187-1
 navbar_pages:
     - url: /
