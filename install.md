@@ -2,9 +2,6 @@
 title: Install Karton
 ---
 
-Installation guide
-==================
-
 Linux
 -----
 

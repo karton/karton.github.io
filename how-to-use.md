@@ -2,10 +2,7 @@
 title: How to use Karton
 ---
 
-How to use Karton
-=================
-
-If you haven't installed Karton yet, do it following the [installation instructions](install.md).
+*If you haven't installed Karton yet, do it following the [installation instructions](install.md).*
 
 
 Create an image
