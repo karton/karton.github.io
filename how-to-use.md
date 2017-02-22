@@ -22,26 +22,27 @@ This will generate a directory called `work-ubuntu-devel-image` inside your home
 
 Open the `definition.py` file and take a look at the comments; they should explain everything you need to know about setting up an image.
 
-Our needs for this image are quite easy:
+The requirements for this image are quite simple:
 
 * Use the latest development version of Ubuntu (called `ubuntu:devel`);
 * Install compiler, headers and other basic development tools;
 * Make the directory where we keep the source code (`~/src`) available to the image.
 
-Modify (using your favourite editor) the `definition.py` file to look like this:
+Modify the `definition.py` file (using your favourite editor) to look like this:
 
 ```python
 def setup_image(props):
     # Name and version of the distro.
     props.distro = 'ubuntu:devel'
 
-    # This is shared at the same relative path (relative to your home
-    # directory) in the image as it is on your machine, that is it will
-    # be accessible as "~/src" in both home and image.
+    # This is shared at the same relative path (relative to
+    # your home directory) in the image as it is on your
+    # machine, that is it will be accessible as "~/src" in
+    # both home and image.
     props.share_path_in_home('src')
 
-    # "build-essential" is name of the Ubuntu package which installs
-    # gcc, make and similar tools.
+    # "build-essential" is name of the Ubuntu package which
+    # installs gcc, make and similar tools.
     props.packages.append('build-essential')
 ```
 
@@ -81,9 +82,10 @@ $ # Now you can run the program you just compiled!
 $ karton run work ./test
 [... output of the test program ...]
 
-$ # The program is a Linux executable even if we are running on macOS.
+$ # The program is a Linux executable even if we are
+$ # running on macOS.
 $ file test
-test: ELF 64-bit LSB shared object, x86-64, version 1 (SYSV), dynamically linked, interpreter /lib64/ld-linux-x86-64.so.2, for GNU/Linux 2.6.32, BuildID[sha1]=4aca7cc9f855c32852dc139242c800b92ae96d5b, not stripped
+test: ELF 64-bit LSB shared object, x86-64,  [...]
 ```
 
 If you want, you can even start a full shell inside the image:
@@ -100,29 +102,46 @@ Creating an alias
 After a while you will probably get bored of typing `karton run IMAGE-NAME` all the time. To make things simpler to type you can create an alias:
 
 ```sh
-$ # Create a symbolic link "wk" which start Karton using the "work" image.
+$ # Create a symbolic link "wk" which start Karton
+$ # using the "work" image.
 $ karton alias wk work
 [...]
 
-$ # This is equivalent to "karton run work echo hello"
-$ wk run echo hello
+$ # This is equivalent to:
+$ #     karton run work echo "Hello!"
+$ wk run echo "Hello!"
+Hello!
 ```
 
-FIXME: Document aliases with commands.
+If you don't even want to have to type `run` every time, you can create an alias which includes a command as well:
 
+```sh
+$ # Create a "wr" alias (which stands for work and run):
+$ karton alias --command run wr work
+
+$ # Run the echo command in the image:
+$ wr echo "Hello!"
+Hello!
+```
 
 Directories inside the image
 ----------------------------
 
-FIXME: Document:
+Images come with their own file system with all the files you would expect in a normal Linux system.
 
-* Transient unless shared
-* But not home
-* Where is home and how to configure it
+All the files and directories are reset when an image is restarted, with the exception of your home directory, and the directories and files you explicitly shared.
+
+### Sharing directories and files
+
+FIXME
+
+### Home directory
+
+FIXME (explain why non-transient but separate and how to configure it)
 
 
 Managing images
----------------------
+---------------
 
 FIXME: Document:
 
@@ -131,10 +150,7 @@ FIXME: Document:
 * Removing
 
 
-Other help(?)
--------------
+Image life cycle
+----------------
 
-FIXME: Document:
-
-* `karton help`
-* FAQs?
+FIXME
