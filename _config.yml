@@ -16,3 +16,5 @@ navbar_pages:
       title: How to use
     - url: /faq.html
       title: FAQ
+    - url: /contribute.html
+      title: Contribute
