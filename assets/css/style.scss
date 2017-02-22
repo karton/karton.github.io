@@ -82,10 +82,15 @@ header table td#cell_text {
 #navbar li a {
     display: block;
     color: white;
-    padding: 15px;
+    padding: 15px 15px 10px 15px; /* 10px on the bottom because of the border. */
+    border-bottom: 5px solid transparent;
     text-decoration: none;
     /* This matches the existing shadows. */
     text-shadow: #111 0px 0px 10px;
+}
+
+#navbar li a.active {
+    border-bottom-color: #0090ff;
 }
 
 #navbar li a:hover {
