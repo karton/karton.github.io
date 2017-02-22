@@ -3,6 +3,14 @@
 
 @import "{{ site.theme }}";
 
+/* ======== Generic ======== */
+
+footer,
+#navbar li a {
+    /* This matches the existing shadows. */
+    text-shadow: #111 0px 0px 10px;
+}
+
 /* ======== Header ======== */
 
 header table,
@@ -85,8 +93,6 @@ header table td#cell_text {
     padding: 15px 15px 10px 15px; /* 10px on the bottom because of the border. */
     border-bottom: 5px solid transparent;
     text-decoration: none;
-    /* This matches the existing shadows. */
-    text-shadow: #111 0px 0px 10px;
 }
 
 #navbar li a.active {
