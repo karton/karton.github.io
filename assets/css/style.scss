@@ -106,6 +106,10 @@ header table td#cell_text {
 
 /* ======== Content ======== */
 
+#main_content {
+    padding-top: 20px; /* The default is 40px which is too much. */
+}
+
 pre {
     /* Without this the pre becomes 640px-wide like the rest of the body,
      * so it overflows its container (because of the padding). */
