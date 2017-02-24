@@ -69,6 +69,18 @@ At the moment, Karton is tested automatically on Ubuntu, Debian, Fedora and Cent
 </details>
 
 <details>
+<summary>Can I use Karton for security reasons or to isolate programs?</summary>
+<p>You shouldn't.</p>
+
+<p><ul>
+<li>Docker doesn't offer as much security as using virtual machines.</li>
+<li>Karton was not created with this use case in mind so it's possible it contains bugs that could affect the security aspect of things.</li>
+<li>Karton uses Docker in privileged mode, which gives containers access to “unsafe” features (this is required, for instance, to allow debuggers to work inside Karton).</li>
+</ul></p>
+
+</details>
+
+<details>
 <summary>What's the license of Karton?</summary>
 <p><a href="https://raw.githubusercontent.com/karton/karton/master/COPYING.LGPL2" target="_blank">LGPL version 2.1 or later</a>.</p>
 
