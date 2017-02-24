@@ -9,18 +9,6 @@ To do this, you just need to tell Karton which distro 🐧 to use, which package
 Then you can run your commands inside the image just by adding <code>karton run <i>image-name</i></code> in front of your commands.
 
 
-Features
---------
-
-* Fast 🏃. Launching a program in an image takes fractions of a second.
-* No need to start/stop a virtual machine or container, it's done transparently and quickly.
-* Multiple terminals access the same running image. You can start a program in one terminal and attach to it with `gdb` from another.
-* Automatic handling of shared directories and files. Your files are accessible both on your system and to programs running in an image.
-* Except for directories you decide to share, the file system is transient. You can reset your changes to the system instantly.
-* Can run Ubuntu, Debian, Fedora and CentOS images.
-* Based on Docker 🐳 containers.
-
-
 Example
 -------
 
@@ -51,3 +39,14 @@ test_arm: ELF 32-bit LSB executable, ARM, EABI5 [...]
 In the example, by prefixing your commands with `karton run ubuntu`, you can run them on Ubuntu even if you are using macOS.<br>
 Files are shared across the two operating systems and executing commands like this is very fast.
 
+
+Features
+--------
+
+* Fast 🏃. Launching a program in an image takes fractions of a second.
+* No need to start/stop a virtual machine or container, it's done transparently and quickly.
+* Multiple terminals access the same running image. You can start a program in one terminal and attach to it with `gdb` from another.
+* Automatic handling of shared directories and files. Your files are accessible both on your system and to programs running in an image.
+* Except for directories you decide to share, the file system is transient. You can reset your changes to the system instantly.
+* Can run Ubuntu, Debian, Fedora and CentOS images.
+* Based on Docker 🐳 containers.
