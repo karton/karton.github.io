@@ -12,32 +12,51 @@ Then you can run your commands inside the image just by adding <code>karton run 
 Example
 -------
 
-You can compile a program written in C on macOS, Ubuntu and Ubuntu for ARMv7 on the same machine:
-
 ``` sh
-$ # Run the compiler on your machine:
-$ gcc -o test_mac test.c
+$ uname -a # Show we are running on macOS.
+Darwin my-hostname 16.4.0 Darwin Kernel Version 16.4.0 (...)
 
-$ # The executable is a Mac binary:
-$ file test_mac
-test_mac: Mach-O 64-bit executable x86_64
+$ # Run the compiler in the Ubuntu image we use for work
+$ # (which we called "ubuntu-work"):
+$ karton run ubuntu-work gcc -o test_linux test.c
 
-$ # Run the compiler inside Ubuntu using Karton:
-$ karton run ubuntu gcc -o test_linux test.c
-
-$ # Verify that the program is actually a Linux
-$ # executable:
+$ # Verify that the program is actually a Linux one, the
+$ # files are shared and available both on your system
+$ # and in the image:
 $ file test_linux
-test_linux: ELF 64-bit LSB executable, x86-64, [...]
+test_linux: ELF 64-bit LSB executable, x86-64, (...)
 
-$ # Same thing but on 32-bit ARMv7:
-$ karton run ubuntu-arm gcc -o test_arm test.c
+$ # Same thing but on 32-bit ARMv7 (in the image we
+$ # called "ubuntu-work-arm"):
+$ karton run ubuntu-work-arm gcc -o test_arm test.c
 $ file test_arm
-test_arm: ELF 32-bit LSB executable, ARM, EABI5 [...]
+test_arm: ELF 32-bit LSB executable, ARM, EABI5 (...)
+
+$ # We can run the ARM program:
+$ karton run ubuntu-work-arm ./test_arm
+(... Output of our program ...)
 ```
 
-In the example, by prefixing your commands with `karton run ubuntu`, you can run them on Ubuntu even if you are using macOS.<br>
-Files are shared across the two operating systems and executing commands like this is very fast.
+In another terminal you can attach to the running program and debug it.
+
+``` sh
+$ # Find the PID of the test_arm program.
+$ karton run ubuntu-work-arm ps aux | grep test_arm
+test_arm    42  (...) test_arm
+
+$ # Debug it!
+$ karton run ubuntu-work-arm gdb --pid 42
+GNU gdb (Ubuntu 7.11.1-0ubuntu1~16.04) 7.11.1
+Copyright (C) 2016 Free Software Foundation, Inc.
+(...)
+Attaching to process 11
+(...)
+0x00007f53430e4740 in __nanosleep_nocancel () at ../sysdeps/unix/syscall-template.S:84
+84	../sysdeps/unix/syscall-template.S: No such file or directory.
+(gdb)
+```
+
+Does typing every time <code>karton run <i>image-name</i></code> look boring? You can use the `alias` command, see `karton help alias`.
 
 
 Features
