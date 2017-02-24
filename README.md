@@ -12,7 +12,7 @@ Then you can run your commands inside the image just by adding <code>karton run 
 Features
 --------
 
-* Fast 🏃🏽. Launching a program in an image takes fractions of a second.
+* Fast 🏃. Launching a program in an image takes fractions of a second.
 * No need to start/stop a virtual machine or container, it's done transparently and quickly.
 * Multiple terminals access the same running image. You can start a program in one terminal and attach to it with `gdb` from another.
 * Automatic handling of shared directories and files. Your files are accessible both on your system and to programs running in an image.
