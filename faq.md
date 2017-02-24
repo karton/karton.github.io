@@ -30,6 +30,18 @@ Karton takes care of lots of small details to make this possible and gives the u
 </details>
 
 <details>
+<summary>Why not using a chroot or schroot?</summary>
+
+<p><ul>
+<li>Chroots don't work on macOS.</li>
+<li>Chroots offer only file system-level isolation while containers offer complete logical isolation from a container to the host and all other containers.</li>
+<li>Docker containers are easier to deal with.</li>
+<li>Docker containers have their own IP address, hostname, etc.</li>
+</ul></p>
+
+</details>
+
+<details>
 <summary>What about different architectures?</summary>
 <p>Karton supports x86-64 plus ARM (ARMv7 and ARMv8 aarch64) with the help of Docker and QEMU. This can be set through the <code>props.architecture</code> property in a definition file.</p>
 
