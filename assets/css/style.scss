@@ -115,6 +115,18 @@ header table td#cell_text {
     border-top-width: 0;
 }
 
+/* ======== Code ======== */
+
+/* Comments */
+.highlight .c {
+    color: rgb(14, 125, 185);
+}
+
+/* Prompts */
+.highlight .gp {
+    color: darkgrey;
+}
+
 /* ======== Content ======== */
 
 #main_content {
