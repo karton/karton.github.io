@@ -68,7 +68,7 @@ $ cd ~/src/my-project/
 $ # ... edit test.c ...
 
 $ # Now compile (using the gcc inside the image, not the
-£ # one on your system!):
+$ # one on your system!):
 $ karton run work gcc -o test test.c
 
 $ # All the files are accessible both on the host and in
