@@ -2,7 +2,7 @@ Karton is a tool which can transparently run Linux programs:
 
 * <i class="twa twa-penguin">🐧</i> on a different Linux distribution,
 * <i class="twa twa-apple">🍎</i> on macOS,
-* <i class="twa twa-laptop-computer">💻</i> on a different architecture (ARMv7 and ARMv8 on x86-64).
+* <i class="twa twa-laptop-computer">💻</i> on a different architecture (ARMv7 and ARMv8, on a x86-64 host).
 
 To do this, you just need to tell Karton which distro <i class="twa twa-penguin">🐧</i> to use, which packages <i class="twa twa-package">📦</i> to install, and which directories <i class="twa twa-open-file-folder">📂</i> to make accessible. This is called an *image*.
 
