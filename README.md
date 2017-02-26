@@ -37,7 +37,7 @@ $ karton run ubuntu-work-arm ./test_arm
 (... Output of our program ...)
 ```
 
-In another terminal you can attach to the running program and debug it.
+<p class="extra-space-top">In another terminal you can attach to the running program and debug it.</p>
 
 ``` sh
 $ # Find the PID of the test_arm program.
@@ -56,7 +56,7 @@ Attaching to process 11
 (gdb)
 ```
 
-Does typing every time <code>karton run <i>image-name</i></code> look boring? You can use the `alias` command, see `karton help alias`.
+<p class="extra-space-top">Does typing every time <code>karton run <i>image-name</i></code> look boring? You can use the `alias` command, see `karton help alias`.</p>
 
 
 Features
