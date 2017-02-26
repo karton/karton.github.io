@@ -17,7 +17,7 @@ See the next two questions for details.</p>
 </details>
 
 <details>
-<summary>Why not using Docker directly?</summary>
+<summary>Why not use Docker directly?</summary>
 <p>Docker was created to do something different. According to Docker's web site:</p>
 
 <blockquote>
@@ -30,7 +30,7 @@ Karton takes care of lots of small details to make this possible and gives the u
 </details>
 
 <details>
-<summary>Why not using a chroot or schroot?</summary>
+<summary>Why not a chroot or schroot?</summary>
 
 <p><ul>
 <li>Chroots don't work on macOS.</li>
