@@ -11,6 +11,19 @@ footer,
     text-shadow: #111 0px 0px 10px;
 }
 
+.twa {
+    /* Hide the text in twa element. This is shown again through JS if needed. */
+    text-indent: -9999px;
+}
+
+.twa.about_detail {
+    width: 1.4em;
+    height: 1.4em;
+    margin: 0 0.1em 0 0.1em !important;
+    vertical-align: 0.1em;
+    background-size: 1.4em 1.4em;
+}
+
 /* ======== Header ======== */
 
 header table,
@@ -113,6 +126,17 @@ header table td#cell_text {
     /* The content has a border which would be visible between navbar and
      * content, so we need to hide it. */
     border-top-width: 0;
+}
+
+/* ======== Footer ======== */
+
+footer .copyright a {
+    color: #0090ff;
+    text-decoration: none;
+}
+
+footer .copyright a:hover {
+    color: white;
 }
 
 /* ======== Code ======== */

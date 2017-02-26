@@ -1,10 +1,10 @@
 Karton is a tool which can transparently run Linux programs:
 
-* 🐧 on a different Linux distribution,
-* 🍎 on macOS,
-* 💻 on a different architecture (ARMv7 and ARMv8 on x86-64).
+* <i class="twa twa-penguin">🐧</i> on a different Linux distribution,
+* <i class="twa twa-apple">🍎</i> on macOS,
+* <i class="twa twa-laptop-computer">💻</i> on a different architecture (ARMv7 and ARMv8 on x86-64).
 
-To do this, you just need to tell Karton which distro 🐧 to use, which packages 📦 to install, and which directories 📂 to make accessible. This is called an *image*.
+To do this, you just need to tell Karton which distro <i class="twa twa-penguin">🐧</i> to use, which packages <i class="twa twa-package">📦</i> to install, and which directories <i class="twa twa-open-file-folder">📂</i> to make accessible. This is called an *image*.
 
 Then you can run your commands inside the image just by adding <code>karton run <i>image-name</i></code> in front of your commands.
 
@@ -62,10 +62,10 @@ Does typing every time <code>karton run <i>image-name</i></code> look boring? Yo
 Features
 --------
 
-* Fast 🏃. Launching a program in an image takes fractions of a second.
+* Fast <i class="twa twa-runner-type-4">🏃🏽</i>. Launching a program in an image takes fractions of a second.
 * No need to start/stop a virtual machine or container, it's done transparently and quickly.
 * Multiple terminals access the same running image. You can start a program in one terminal and attach to it with `gdb` from another.
 * Automatic handling of shared directories and files. Your files are accessible both on your system and to programs running in an image.
 * Except for directories you decide to share, the file system is transient. You can reset your changes to the system instantly.
 * Can run Ubuntu, Debian, Fedora and CentOS images.
-* Based on Docker 🐳 containers.
+* Based on Docker <i class="twa twa-whale">🐳</i> containers.

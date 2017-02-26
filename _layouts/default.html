@@ -7,9 +7,45 @@
     <meta name="viewport" content="width=device-width,maximum-scale=2">
     <meta name="description" content="{{ site.title | default: site.github.repository_name }} &mdash; {{ site.description | default: site.github.project_tagline }}">
 
+    <link rel="stylesheet" type="text/css" href="assets/css/twemoji-awesome.css">
     <link rel="stylesheet" type="text/css" media="screen" href="{{ '/assets/css/style.css?v=' | append: site.github.build_revision | relative_url }}">
 
     <title>{{ page.title | default: site.title }}</title>
+
+    <style type="text/css" id="emoji_style"></style>
+    <script>
+        /* The Apple emoji are nicer looking than the Twitter ones, so, if we can, we
+         * use them.
+         * On other operating systems and browsers, it's all too unreliable, so we
+         * just use the Twitter ones. */
+
+        // iOS is good.
+        var useOwnEmoji = /iPad|iPhone|iPod/i.test(navigator.userAgent) && !window.MSStream;
+        if (!useOwnEmoji) {
+            var match = /Mac OS X 10[_.](\d+)/.exec(navigator.userAgent);
+            if (match !== null && parseInt(match[1]) >= 12)
+                // Sierra (10.12) or later. Before Sierra some browsers (at least Chrome) had
+                // some problems with emoji.
+                useOwnEmoji = true;
+        }
+        if (useOwnEmoji) {
+            document.getElementById('emoji_style').innerHTML =
+                '.twa {\n' +
+                '    text-indent: 0;\n' +
+                '    display: auto !important;\n' +
+                '    Avertical-align: baseline !important;\n' +
+                '    background-image: none !important;\n' +
+                '    height: auto !important;\n' +
+                '    width: auto !important;\n' +
+                '    margin: 0 !important;\n' +
+                '    padding: 0 !important;\n' +
+                '}\n' +
+                '.twa.about_detail {\n' +
+                '    font-size: 1.4em !important;\n' +
+                '    vertical-align: -0.1em !important;\n' +
+                '}\n';
+        }
+    </script>
   </head>
 
   <body>
@@ -56,11 +92,13 @@
     <div id="footer_wrap" class="outer">
       <footer class="inner">
         <p class="copyright">
-            {{ site.title | default: site.github.repository_name }} is maintained by
-            {{ site.github.owner_name }}
-            &ndash;
-            <a href="{{ site.github.owner_url }}" target="_blank">Website</a>,
-            <a href="https://twitter.com/barisione/" target="_blank">Twitter</a>
+            {{ site.title | default: site.github.repository_name }}, brought to you with
+            <i class="twa twa-heart">❤️</i>
+            by
+            {{ site.github.owner_name }}:
+            <a href="{{ site.github.owner_url }}" target="_blank" title="Website"><i class="twa about_detail twa-globe-showing-europe-africa">🌍</i></a>
+            <a href="https://twitter.com/barisione/" target="_blank" title="Twitter"><i class="twa about_detail twa-bird">🐦</i></a>
+            <a href="mailto:marco@barisione.org?subject=Karton" title="Email"><i class="twa about_detail twa-email">✉️</i></a>
         </p>
         <!-- <p>Published with <a href="https://pages.github.com">GitHub Pages</a></p> -->
       </footer>
