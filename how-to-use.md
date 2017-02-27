@@ -25,7 +25,7 @@ Open the `definition.py` file and take a look at the comments; they should expla
 The requirements for this image are quite simple:
 
 * Use the latest development version of Ubuntu (called `ubuntu:devel`);
-* Install compiler, headers and other basic development tools;
+* Install compiler, headers, debugger, and other basic development tools;
 * Make the directory where we keep the source code (`~/src`) available to the image.
 
 Modify the `definition.py` file (using your favourite editor) to look like this:
@@ -43,7 +43,8 @@ def setup_image(props):
 
     # "build-essential" is name of the Ubuntu package which
     # installs gcc, make and similar tools.
-    props.packages.append('build-essential')
+    # "gdb" is the debugger.
+    props.packages.extend(['build-essential', 'gdb'])
 ```
 
 Now that the image is defined you need to build it:
