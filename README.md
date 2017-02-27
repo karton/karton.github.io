@@ -14,7 +14,7 @@ Example
 
 ``` sh
 $ uname -a # Show we are running on macOS.
-Darwin my-hostname 16.4.0 Darwin Kernel Version 16.4.0 (...)
+Darwin my-hostname 16.4.0 Darwin Kernel Version 16.4.0 [...]
 
 $ # Run the compiler in the Ubuntu image we use for work
 $ # (which we called "ubuntu-work"):
@@ -24,17 +24,17 @@ $ # Verify that the program is actually a Linux one, the
 $ # files are shared and available both on your system
 $ # and in the image:
 $ file test_linux
-test_linux: ELF 64-bit LSB executable, x86-64, (...)
+test_linux: ELF 64-bit LSB executable, x86-64, [...]
 
 $ # Same thing but on 32-bit ARMv7 (in the image we
 $ # called "ubuntu-work-arm"):
 $ karton run ubuntu-work-arm gcc -o test_arm test.c
 $ file test_arm
-test_arm: ELF 32-bit LSB executable, ARM, EABI5 (...)
+test_arm: ELF 32-bit LSB executable, ARM, EABI5 [...]
 
 $ # We can run the ARM program:
 $ karton run ubuntu-work-arm ./test_arm
-(... Output of our program ...)
+[... Output of our program ...]
 ```
 
 <p class="extra-space-top">In another terminal you can attach to the running program and debug it.</p>
@@ -42,15 +42,15 @@ $ karton run ubuntu-work-arm ./test_arm
 ``` sh
 $ # Find the PID of the test_arm program.
 $ karton run ubuntu-work-arm ps aux | grep test_arm
-test_arm    42  (...) test_arm
+test_arm    42  [...]  test_arm
 
 $ # Debug it!
 $ karton run ubuntu-work-arm gdb --pid 42
 GNU gdb (Ubuntu 7.11.1-0ubuntu1~16.04) 7.11.1
 Copyright (C) 2016 Free Software Foundation, Inc.
-(...)
+[...]
 Attaching to process 11
-(...)
+[...]
 0x00007f53430e4740 in __nanosleep_nocancel () at ../sysdeps/unix/syscall-template.S:84
 84	../sysdeps/unix/syscall-template.S: No such file or directory.
 (gdb)
