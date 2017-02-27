@@ -155,6 +155,17 @@ footer .copyright a:hover {
     color: darkgrey;
 }
 
+/* Test and similar keywords (which, in our examples, are just names...) */
+.highlight .nb {
+    color: black;
+}
+
+/* Not sure what this is supposed to be, but it only hightlights "(", ")",
+ * and "[" and looks ugly. */
+.highlight .o {
+    font-weight: 400;
+}
+
 /* ======== Content ======== */
 
 #main_content {
