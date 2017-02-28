@@ -194,3 +194,14 @@ details summary {
 .extra-space-top {
     margin-top: 25px;
 }
+
+#main_content li {
+    margin: 3px 0;
+}
+
+#main_content ul ul,
+#main_content ul ol,
+#main_content ol ol,
+#main_content ol ul {
+    margin-bottom: 0;
+}
