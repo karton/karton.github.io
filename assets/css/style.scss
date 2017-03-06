@@ -172,6 +172,16 @@ footer .copyright a:hover {
     padding-top: 20px; /* The default is 40px which is too much. */
 }
 
+h2 {
+    /* The default 10px top margin is too little. */
+    margin-top: 20px;
+}
+
+h2:first-child {
+    /* But the first element needs less margin. */
+    margin-top: 5px;
+}
+
 pre {
     /* Without this the pre becomes 640px-wide like the rest of the body,
      * so it overflows its container (because of the padding). */
