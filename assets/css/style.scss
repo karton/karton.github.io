@@ -5,6 +5,10 @@
 
 /* ======== Generic ======== */
 
+a {
+    outline: none !important;
+}
+
 footer,
 #navbar li a {
     /* This matches the existing shadows. */
