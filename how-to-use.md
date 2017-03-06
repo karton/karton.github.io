@@ -134,9 +134,3 @@ Managing images
 * You can add more new images with `karton image create` or add a new image based on an existing definition file with `karton image import`.
 * If you don't need an image any more, remove it with `karton image remove`.
 * Use `karton help image` for more information.
-
-
-Image life cycle
-----------------
-
-FIXME
