@@ -130,11 +130,10 @@ Hello!
 Managing images
 ---------------
 
-FIXME: Document:
-
-* Creating new ones
-* Adding existing
-* Removing
+* If you need to change something in an image, just edit the `definition.py` file and re-run `karton build`.
+* You can add more new images with `karton image create` or add a new image based on an existing definition file with `karton image import`.
+* If you don't need an image any more, remove it with `karton image remove`.
+* Use `karton help image` for more information.
 
 
 Image life cycle
