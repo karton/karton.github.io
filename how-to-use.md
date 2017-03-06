@@ -125,21 +125,6 @@ $ wr echo "Hello!"
 Hello!
 ```
 
-Directories inside the image
-----------------------------
-
-Images come with their own file system with all the files you would expect in a normal Linux system.
-
-All the files and directories are reset when an image is restarted, with the exception of your home directory, and the directories and files you explicitly shared.
-
-### Sharing directories and files
-
-FIXME
-
-### Home directory
-
-FIXME (explain why non-transient but separate and how to configure it)
-
 
 Managing images
 ---------------
