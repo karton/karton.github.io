@@ -20,7 +20,8 @@ $ karton image create work ~/work-ubuntu-devel-image
 
 This will generate a directory called `work-ubuntu-devel-image` inside your home directory. Inside this directory there's a Python source file called `definition.py`.
 
-Open the `definition.py` file and take a look at the comments; they should explain everything you need to know about setting up an image.
+Open the `definition.py` file and take a look at the comments; they should explain what you need to know to up an image.<br>
+The [full API documentation](https://github.com/karton/karton/blob/master/docs/props.md) is available as well.
 
 The requirements for this image are quite simple:
 
