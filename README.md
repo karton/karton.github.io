@@ -56,7 +56,7 @@ Attaching to process 11
 (gdb)
 ```
 
-<p class="extra-space-top">Does typing every time <code>karton run <i>image-name</i></code> look boring? You can use the `alias` command, see `karton help alias`.</p>
+<p class="extra-space-top">Does typing every time <code>karton run <i>image-name</i></code> look boring? You can use the <code>alias</code> command, see <code>karton help alias</code>.</p>
 
 
 Features
