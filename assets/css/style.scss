@@ -114,6 +114,9 @@ header table td#cell_text {
     padding: 15px 15px 10px 15px; /* 10px on the bottom because of the border. */
     border-bottom: 5px solid transparent;
     text-decoration: none;
+    /* Confusingly, on the real website, but not on the local one, some of
+     * the links as bold. Make sure they never are. */
+    font-weight: normal !important;
 }
 
 #navbar li a.active {
