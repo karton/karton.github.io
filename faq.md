@@ -45,13 +45,7 @@ Karton takes care of lots of small details to make this possible and gives the u
 <summary>What about different architectures?</summary>
 <p>Karton supports x86-64 plus ARM (ARMv7 and ARMv8 aarch64) with the help of Docker and QEMU. This can be set through the <code>props.architecture</code> property in a definition file.</p>
 
-<p>Note that not all distros are supported. At the moment, I believe that only Ubuntu and Debian work reliably.</p>
-
-</details>
-
-<details>
-<summary>Does Karton run on Windows?</summary>
-<p>Not at the moment. I don't use Windows and I cannot port Karton to it. I'm happy to accept contributions to make Karton work on Windows if anybody is interested.</p>
+<p>Note that not all distros are supported. See the next two questions for details.</p>
 
 </details>
 
@@ -59,6 +53,12 @@ Karton takes care of lots of small details to make this possible and gives the u
 <summary>Does Karton run on my Linux distro?</summary>
 <p>Probably yes, as long as Docker supports it and you are using a recent version of Docker.<br>
 At the moment, Karton is tested automatically on Ubuntu, Debian, Fedora and CentOS.</p>
+
+</details>
+
+<details>
+<summary>Does Karton run on Windows?</summary>
+<p>Not at the moment. I don't use Windows and I cannot port Karton to it. I'm happy to accept contributions to make Karton work on Windows if anybody is interested.</p>
 
 </details>
 
